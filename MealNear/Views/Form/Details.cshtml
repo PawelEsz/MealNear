@@ -1,0 +1,42 @@
+﻿@model MealNear.Models.Person
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+
+
+@if (!(Model.Name == null))
+{
+<table id="details" border="solid 1px black">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Name)</th>
+        <th>@Model.Name</th>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Surname)</th>
+        <th>@Model.Surname</th>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Gender)</th>
+        <th>@Model.Gender</th>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Age)</th>
+        <th>@Model.Age</th>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Job)</th>
+        <th>@Model.Job</th>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Description)</th>
+        <th>@Model.Description</th>
+    </tr>
+</table>
+}else
+{
+  <text>Nie wypełniłeś jeszcze formularza. Kliknij</text>  @Html.ActionLink(" tutaj", "Create", "Form")<text>, aby go wypełnić.</text>
+}
